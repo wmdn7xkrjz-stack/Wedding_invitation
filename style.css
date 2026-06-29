@@ -1,0 +1,229 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  text-align: center;
+  line-height: 1.6;
+  background-color:#f5f5cf;
+
+}
+
+/* Header Section */
+.header-section {
+  background: url('photos/sarqac.jpg') no-repeat center center;
+  background-size:cover;
+  position: relative;
+  background-position: center 80%;
+  background-color: rgb(245, 245, 117);
+  padding: 90px 30px 50px;
+  color: #ebc7c7;
+}
+.header-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(90, 86, 86, 0.5);
+  z-index: 0;
+}
+
+.header-section .countdown-container,
+.header-section .names,
+.header-section .wedding-date {
+  position: relative;
+  z-index: 1;
+}
+
+/* Countdown */
+.countdown-container {
+  margin: 40px 0;
+  font-size: 24px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column; /* Սա ստիպում է տարրերին դասավորվել իրար տակ */
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Հեռավորությունը տեքստի և թվերի միջև */
+}
+
+/* Տեքստի ոճը */
+.countdown-title {
+  color: #fff;
+}
+
+/* Թվերի ոճի թարմացում */
+.countdown {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center; /* Թվերը բերում է ուղիղ կենտրոն */
+  color: #fff;
+}
+
+/* Header Names */
+.names {
+  font-family: 'Great Vibes', cursive;
+  font-size: 100px;
+  margin: 30px 0 10px;
+  line-height: 1.0;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+/* Wedding Date */
+.wedding-date {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: #fff;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+  margin-top: 0;
+}
+
+/* Main content */
+.main-content {
+  background: #f5f5cf;
+  padding: 60px 20px;
+  color: #333;
+  position: relative;
+}
+
+/* Calendar */
+.calendar {
+  margin: 60px auto;
+  max-width: 500px;
+}
+.calendar h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  table-layout: fixed;
+}
+th, td {
+  width: 14.28%;
+  padding: 5px 0;
+  text-align: center;
+  font-size: 18px;
+  position: relative;
+  color: #333;
+}
+th {
+  font-weight: 600;
+}
+
+/* Pulsating red heart */
+.highlight-heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  animation: pulse 1.5s infinite;
+}
+.highlight-heart:before {
+  content: "❤";
+  font-size: 40px;
+  color: rgba(201,79,79,0.9);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+.highlight-heart span {
+  position: relative;
+  z-index: 1;
+  font-weight: 600;
+  font-size: 18px;
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Sections */
+.section {
+  margin: 60px auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+#zags {
+  font-size: 40px;         
+  line-height: 1.2;         
+  padding: 0 10px;          
+  margin-bottom: 15px;      
+}
+.section h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 52px;
+  margin-bottom: 20px;
+  color: #333;
+}
+.section .section-header {
+  font-family: 'Great Vibes', cursive;
+  font-size: 60px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+.section .section-subheader {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #555;
+}
+.section .venue-name {
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+.section img {
+  margin-top: 10px;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* Map Buttons */
+.map-button {
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #555;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.map-button:hover {
+  background-color: #333;
+}
+
+/* Music Control */
+.music-control {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 999;
+}
+.music-control img {
+  width: 28px; height: 28px;
+}
